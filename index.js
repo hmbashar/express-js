@@ -52,6 +52,17 @@ app.get("/five", function(req, res) {
     res.download("./assets/express-download.jpg")
 });
 
+//Redirect Response
+app.get("/Bangladesh", function(req, res) {
+    res.redirect("http://localhost:8000/India")
+});
+
+
+app.get("/India", function(req, res) {
+    res.send("India");
+});
+
+
 app.listen(8000, function() {
     console.log('Server running on port 8000');
 })

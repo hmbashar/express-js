@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab793d8a-bf76-42e2-b951-bdbb65753840" name="Changes" comment="git init">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729848961518</updated>
       <workItem from="1729848962592" duration="280000" />
-      <workItem from="1729849252964" duration="3029000" />
+      <workItem from="1729849252964" duration="3638000" />
     </task>
     <task id="LOCAL-00001" summary="git init">
       <option name="closed" value="true" />
