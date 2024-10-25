@@ -46,6 +46,12 @@ app.get('/four', function(request, response) {
     response.json(MyJsonArry);
 });
 
+
+//Download Response
+app.get("/five", function(req, res) {
+    res.download("./assets/express-download.jpg")
+});
+
 app.listen(8000, function() {
     console.log('Server running on port 8000');
 })
