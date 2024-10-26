@@ -1,8 +1,12 @@
 let express = require('express');
 let bodyParser = require('body-parser');
+var multer = require('multer');
+var multer = multer();
 app = express();
 
 app.use(bodyParser.json());
+app.use(multer.array())
+app.use(express.static('public'));
 
 // app.get('/one', function(request, response) {
 //     response.send("This is simple string response");
@@ -139,6 +143,13 @@ app.post('/body-parser', function(req, res) {
    let country = JSONData.Country;
 
     res.send("Name: "+ name + " City " + city + " Country " + country);
+});
+
+
+//multipart from data (Multer)
+app.post('/multi', function(req, res) {
+    let JSONData = req.body;
+    res.send(JSON.stringify(JSONData));
 });
 
 
