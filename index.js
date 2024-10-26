@@ -83,6 +83,17 @@ app.get("/Seven", function(req, res) {
     res.end("Hello World! From Cookie");
 });
 
+//Header cookies clear response
+app.get("/Eight", function(req, res) {
+
+    res.clearCookie('name');
+    res.clearCookie('City');
+    res.clearCookie('age');
+
+    res.end("Cookie Clear successfully!");
+});
+
+
 app.listen(8000, function() {
     console.log('Server running on port 8000');
 })
