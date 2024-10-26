@@ -121,6 +121,14 @@ app.post('/Eleven', function(req, res) {
 });
 
 
+//post request with header
+app.post('/12', function(req, res) {
+    let username = req.header('userName')
+    let password = req.header('password');
+
+    res.send("User Name: " + username + " " + "Password " + password);
+});
+
 
 app.listen(8000, function() {
     console.log('Server running on port 8000');
