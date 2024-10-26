@@ -93,7 +93,7 @@ app.get("/Eight", function(req, res) {
     res.end("Cookie Clear successfully!");
 });
 
-//Header cookies clear response
+//request query
 app.get("/Nine", function(req, res) {
 
     let firstname = req.query.firstname;
@@ -101,6 +101,14 @@ app.get("/Nine", function(req, res) {
     res.send(firstname + " " + lastname);
 });
 
+
+//request header
+app.get("/Ten", function(req, res) {
+
+    let firstname = req.header('firstName');
+    let lastname = req.header('lastName');
+    res.end(firstname + " " + lastname);
+});
 
 app.listen(8000, function() {
     console.log('Server running on port 8000');
