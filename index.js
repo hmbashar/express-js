@@ -1,7 +1,8 @@
 let express = require('express');
-
+let bodyParser = require('body-parser');
 app = express();
 
+app.use(bodyParser.json());
 
 // app.get('/one', function(request, response) {
 //     response.send("This is simple string response");
@@ -127,6 +128,17 @@ app.post('/12', function(req, res) {
     let password = req.header('password');
 
     res.send("User Name: " + username + " " + "Password " + password);
+});
+
+//post application-json
+app.post('/body-parser', function(req, res) {
+    let JSONData = req.body;
+
+   let name = JSONData.Name;
+   let city = JSONData.City;
+   let country = JSONData.Country;
+
+    res.send("Name: "+ name + " City " + city + " Country " + country);
 });
 
 
