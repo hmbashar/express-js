@@ -107,7 +107,8 @@ app.get("/Ten", function(req, res) {
 
     let firstname = req.header('firstName');
     let lastname = req.header('lastName');
-    res.end(firstname + " " + lastname);
+    let userAgent = req.header('User-Agent');
+    res.end(firstname + " " + lastname + " " + userAgent);
 });
 
 app.listen(8000, function() {
