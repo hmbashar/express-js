@@ -8,6 +8,11 @@ app.use(bodyParser.json());
 //app.use(multer.array())  //for form data
 //app.use(express.static('public'));  //for form data
 
+app.use(function(req,res,next) {
+    console.log('Middleware Execution');
+    next();
+});
+
 let storage = multer.diskStorage({
     destination: function (req, file, callBack) {
         callBack(null, './uploads')
