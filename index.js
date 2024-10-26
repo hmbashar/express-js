@@ -62,7 +62,7 @@ app.get("/India", function(req, res) {
     res.send("India");
 });
 
-//Header Key added
+//Header response Key added
 app.get("/Six", function(req, res) {
 
     res.append('name', "Md Abul Bashar");
@@ -70,6 +70,17 @@ app.get("/Six", function(req, res) {
     res.append('age', "30 Years Old");
 
     res.status(201).end("Hello World!");
+});
+
+
+//Header cookies response
+app.get("/Seven", function(req, res) {
+
+    res.cookie('name', "Md Abul Bashar");
+    res.cookie('City', "Patuakhali");
+    res.cookie('age', "30 Years Old");
+
+    res.end("Hello World! From Cookie");
 });
 
 app.listen(8000, function() {
