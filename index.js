@@ -1,12 +1,12 @@
 let express = require('express');
 let bodyParser = require('body-parser');
 var multer = require('multer');
-//var multer = multer();
+//var multer = multer(); //for form data
 app = express();
 
 app.use(bodyParser.json());
-//app.use(multer.array())
-//app.use(express.static('public'));
+//app.use(multer.array())  //for form data
+//app.use(express.static('public'));  //for form data
 
 let storage = multer.diskStorage({
     destination: function (req, file, callBack) {
